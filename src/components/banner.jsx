@@ -1,12 +1,12 @@
 import React from "react";
-import { ReactComponent as RightArrow } from "../assets/arrow-right.svg"
+import { ReactComponent as RightArrow } from "../assets/arrow-right.svg";
 
-export default function Banner() {
+export default function Banner({ title }) {
     return (
         <section className="main">
             <div className="container">
                 <div className="row">
-                    <h2>
+                    <h2 ref={title}>
                         <div className="line">
                             <span>Creating unique brands is</span>
                         </div>
@@ -15,7 +15,9 @@ export default function Banner() {
                         </div>
                     </h2>
                     <div className="btn-row">
-                        <a href="/">More about us <RightArrow/></a>
+                        <a href="/">
+                            More about us <RightArrow />
+                        </a>
                     </div>
                 </div>
             </div>
